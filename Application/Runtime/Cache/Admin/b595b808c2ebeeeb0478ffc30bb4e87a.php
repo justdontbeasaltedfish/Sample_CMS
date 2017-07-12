@@ -11,26 +11,26 @@
 
     <title>sing后台管理平台</title>
     <!-- Bootstrap Core CSS -->
-    <link href="/CMS/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Sample_CMS/Public/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/CMS/Public/css/sb-admin.css" rel="stylesheet">
+    <link href="/Sample_CMS/Public/css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/CMS/Public/css/plugins/morris.css" rel="stylesheet">
+    <link href="/Sample_CMS/Public/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/CMS/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/CMS/Public/css/sing/common.css"/>
-    <link rel="stylesheet" href="/CMS/Public/css/party/bootstrap-switch.css"/>
-    <link rel="stylesheet" type="text/css" href="/CMS/Public/css/party/uploadify.css">
+    <link href="/Sample_CMS/Public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/Sample_CMS/Public/css/sing/common.css"/>
+    <link rel="stylesheet" href="/Sample_CMS/Public/css/party/bootstrap-switch.css"/>
+    <link rel="stylesheet" type="text/css" href="/Sample_CMS/Public/css/party/uploadify.css">
 
     <!-- jQuery -->
-    <script src="/CMS/Public/js/jquery.js"></script>
-    <script src="/CMS/Public/js/bootstrap.min.js"></script>
-    <script src="/CMS/Public/js/dialog/layer.js"></script>
-    <script src="/CMS/Public/js/dialog.js"></script>
-    <script type="text/javascript" src="/CMS/Public/js/party/jquery.uploadify.js"></script>
+    <script src="/Sample_CMS/Public/js/jquery.js"></script>
+    <script src="/Sample_CMS/Public/js/bootstrap.min.js"></script>
+    <script src="/Sample_CMS/Public/js/dialog/layer.js"></script>
+    <script src="/Sample_CMS/Public/js/dialog.js"></script>
+    <script type="text/javascript" src="/Sample_CMS/Public/js/party/jquery.uploadify.js"></script>
 
 </head>
 
@@ -65,7 +65,7 @@
 
                 <li class="divider"></li>
                 <li>
-                    <a href="/CMS/admin.php?c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
+                    <a href="/Sample_CMS/admin.php?c=login&a=loginout"><i class="fa fa-fw fa-power-off"></i> 退出</a>
                 </li>
             </ul>
         </li>
@@ -74,7 +74,7 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav nav_list">
             <li <?php echo (getActive($index)); ?>>
-                <a href="/CMS/admin.php"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
+                <a href="/Sample_CMS/admin.php"><i class="fa fa-fw fa-dashboard"></i> 首页</a>
             </li>
             <?php if(is_array($navs)): $i = 0; $__LIST__ = $navs;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$navo): $mod = ($i % 2 );++$i;?><li <?php echo (getActive($navo["c"])); ?>>
                     <a href="<?php echo (getAdminMenuUrl($navo)); ?>"><i class="fa fa-fw fa-bar-chart-o"></i> <?php echo ($navo["name"]); ?></a>
@@ -208,7 +208,7 @@
 </div>
     <!-- /#wrapper -->
 
-<script src="/CMS/Public/js/admin/common.js"></script>
+<script src="/Sample_CMS/Public/js/admin/common.js"></script>
 
 
 </body>

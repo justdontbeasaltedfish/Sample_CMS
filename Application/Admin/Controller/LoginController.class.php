@@ -13,7 +13,7 @@ class LoginController extends Controller
     public function index()
     {
         if (session('adminUser')) {
-            $this->redirect('/CMS/admin.php?c=index');
+            $this->redirect('/Sample_CMS/admin.php?c=index');
         }
         // admin.php?c=index
         $this->display();
@@ -50,7 +50,7 @@ class LoginController extends Controller
     public function loginout()
     {
         session('adminUser', null);
-        $this->redirect('/CMS/admin.php?c=login');
+        $this->redirect('/Sample_CMS/admin.php?c=login');
     }
 
 }

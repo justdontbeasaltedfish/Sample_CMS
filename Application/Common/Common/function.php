@@ -39,9 +39,9 @@ function status($status)
 
 function getAdminMenuUrl($nav)
 {
-    $url = '/CMS/admin.php?c=' . $nav['c'] . '&a=' . $nav['a'];
+    $url = '/Sample_CMS/admin.php?c=' . $nav['c'] . '&a=' . $nav['a'];
     if ($nav['f'] == 'index') {
-        $url = '/CMS/admin.php?c=' . $nav['c'];
+        $url = '/Sample_CMS/admin.php?c=' . $nav['c'];
     }
     return $url;
 }

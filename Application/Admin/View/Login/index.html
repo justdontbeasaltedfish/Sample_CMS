@@ -12,7 +12,7 @@
     <title>singcms内容管理平台</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/CMS/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Sample_CMS/Public/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="signin.css" rel="stylesheet">
 
@@ -44,10 +44,10 @@
     </form>
 
 </div> <!-- /container -->
-<script src="/CMS/Public/js/jquery.js"></script>
-<script src="/CMS/Public/js/dialog/layer.js"></script>
-<script src="/CMS/Public/js/dialog.js"></script>
-<script src="/CMS/Public/js/admin/login.js"></script>
+<script src="/Sample_CMS/Public/js/jquery.js"></script>
+<script src="/Sample_CMS/Public/js/dialog/layer.js"></script>
+<script src="/Sample_CMS/Public/js/dialog.js"></script>
+<script src="/Sample_CMS/Public/js/admin/login.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
 </html>
