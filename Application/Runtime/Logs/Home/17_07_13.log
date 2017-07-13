@@ -1,0 +1,678 @@
+[ 2017-07-13T15:33:34+08:00 ] ::1 /Sample_CMS/index.php?c=detail&a=view&id=23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `cms_news` WHERE ( news_id=23 ) LIMIT 1   [ RunTime:0.0111s ]
+SQL: UPDATE `cms_news` SET `count`='24' WHERE ( news_id=23 ) [ RunTime:0.0111s ]
+NOTIC: [2] Declaration of Common\Model\NewsContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsContentModel.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `cms_news_content` [ RunTime:0.0198s ]
+SQL: SELECT * FROM `cms_news_content` WHERE ( news_id=23 ) LIMIT 1   [ RunTime:0.0183s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0127s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0154s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0166s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0225s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0126s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/0d75cb75cd30b13fdd4834afd69acb19.php 第 63 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/0d75cb75cd30b13fdd4834afd69acb19.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2017-07-13T15:55:58+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=build_html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0141s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0138s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0228s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0147s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0256s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-07-13T15:56:40+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=build_html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000289s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0128s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0130s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0124s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0143s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0106s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0133s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0108s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035994s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000437s ]
+
+[ 2017-07-13T15:58:55+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=build_html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001216s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000817s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0139s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0114s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0144s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0127s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0123s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0129s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0159s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051096s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000918s ]
+
+[ 2017-07-13T16:47:38+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001183s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000906s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0147s ]
+
+[ 2017-07-13T16:54:15+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0121s ]
+
+[ 2017-07-13T16:54:24+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=build_html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0191s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0203s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0159s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0132s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0137s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0146s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040524s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040621s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000353s ]
+
+[ 2017-07-13T16:54:38+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0216s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0149s ]
+
+[ 2017-07-13T16:55:02+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000678s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=3 ) LIMIT 1   [ RunTime:0.0120s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0361s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0149s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 3 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0143s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 3 LIMIT 1   [ RunTime:0.0122s ]
+NOTIC: [8] Undefined variable: sing_path /Library/WebServer/Documents/Sample_CMS/ThinkPHP/Common/functions.php 第 991 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0117s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000422s ]
+
+[ 2017-07-13T16:55:12+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0253s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0191s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0168s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0175s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0479s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 12 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0148s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 12 LIMIT 1   [ RunTime:0.0119s ]
+NOTIC: [8] Undefined variable: sing_path /Library/WebServer/Documents/Sample_CMS/ThinkPHP/Common/functions.php 第 991 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0118s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000688s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000831s ]
+
+[ 2017-07-13T16:55:22+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0158s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=8 ) LIMIT 1   [ RunTime:0.0132s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0126s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0120s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0119s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 8 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0112s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 8 LIMIT 1   [ RunTime:0.0119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0107s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2017-07-13T16:55:54+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0163s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0403s ]
+
+[ 2017-07-13T16:56:28+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0299s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=8 ) LIMIT 1   [ RunTime:0.2848s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0288s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0389s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0171s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0277s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 8 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0158s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 8 LIMIT 1   [ RunTime:0.0195s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0211s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000880s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001057s ]
+
+[ 2017-07-13T16:56:29+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000295s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0105s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0101s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0123s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 12 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 12 LIMIT 1   [ RunTime:0.0086s ]
+NOTIC: [8] Undefined variable: sing_path /Library/WebServer/Documents/Sample_CMS/ThinkPHP/Common/functions.php 第 991 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0098s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2017-07-13T16:56:30+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=3 ) LIMIT 1   [ RunTime:0.0142s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0139s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0239s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0634s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 3 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0146s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 3 LIMIT 1   [ RunTime:0.0129s ]
+NOTIC: [8] Undefined variable: sing_path /Library/WebServer/Documents/Sample_CMS/ThinkPHP/Common/functions.php 第 991 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0236s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2017-07-13T16:56:31+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0194s ]
+
+[ 2017-07-13T16:56:35+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=build_html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0252s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0177s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0145s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 2 ORDER BY listorder desc ,id desc LIMIT 1   [ RunTime:0.0139s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 3 ORDER BY listorder desc ,id desc LIMIT 3   [ RunTime:0.0118s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 AND `thumb` <> '' ORDER BY news_id desc LIMIT 30   [ RunTime:0.0130s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000361s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0156s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0127s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php 第 97 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048983s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000462s ]
+
+[ 2017-07-13T16:56:40+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000718s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0138s ]
+
+[ 2017-07-13T16:56:47+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=3 ) LIMIT 1   [ RunTime:0.0113s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0131s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0135s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0126s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 3 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 3 LIMIT 1   [ RunTime:0.0134s ]
+NOTIC: [8] Undefined variable: sing_path /Library/WebServer/Documents/Sample_CMS/ThinkPHP/Common/functions.php 第 991 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0119s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021746s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-07-13T16:56:52+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0225s ]
+
+[ 2017-07-13T16:56:53+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=12
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=12 ) LIMIT 1   [ RunTime:0.0111s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0125s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0108s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0107s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 12 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 12 LIMIT 1   [ RunTime:0.0101s ]
+NOTIC: [8] Undefined variable: sing_path /Library/WebServer/Documents/Sample_CMS/ThinkPHP/Common/functions.php 第 991 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0128s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000712s ]
+
+[ 2017-07-13T16:56:59+08:00 ] ::1 /Sample_CMS/index.php?c=cat&id=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\MenuModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/MenuModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `cms_menu` WHERE ( menu_id=8 ) LIMIT 1   [ RunTime:0.0161s ]
+NOTIC: [2] Declaration of Common\Model\PositionContentModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `cms_position_content` [ RunTime:0.0120s ]
+NOTIC: [8] Undefined index: title /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/PositionContentModel.class.php 第 23 行.
+SQL: SELECT * FROM `cms_position_content` WHERE `status` = 1 AND `position_id` = 5 ORDER BY listorder desc ,id desc LIMIT 2   [ RunTime:0.0107s ]
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 165 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc,news_id desc  LIMIT 10   [ RunTime:0.0115s ]
+NOTIC: [8] Undefined index: p /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CatController.class.php 第 23 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 8 ORDER BY listorder desc ,news_id desc LIMIT 0,20   [ RunTime:0.0116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 AND `thumb` <> '' AND `catid` = 8 LIMIT 1   [ RunTime:0.0165s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [2] Declaration of Common\Model\BasicModel::save($data = Array) should be compatible with Think\Model::save($data = '', $options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+NOTIC: [2] Declaration of Common\Model\BasicModel::select() should be compatible with Think\Model::select($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/BasicModel.class.php 第 34 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0154s ]
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+NOTIC: [8] Undefined index: name /Library/WebServer/Documents/Sample_CMS/Application/Runtime/Cache/Home/14fcc139096cfd1d2075eb8db7e60b1e.php 第 76 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2017-07-13T16:57:06+08:00 ] ::1 /Sample_CMS/index.php?c=index&a=getCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+NOTIC: [2] Declaration of Home\Controller\CommonController::error($message = '') should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /Library/WebServer/Documents/Sample_CMS/Application/Home/Controller/CommonController.class.php 第 31 行.
+NOTIC: [2] Declaration of Common\Model\NewsModel::find($id) should be compatible with Think\Model::find($options = Array) /Library/WebServer/Documents/Sample_CMS/Application/Common/Model/NewsModel.class.php 第 11 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0115s ]
+SQL: SELECT * FROM `cms_news` WHERE `news_id` IN ('24','23','22','21')  [ RunTime:0.0128s ]
+
