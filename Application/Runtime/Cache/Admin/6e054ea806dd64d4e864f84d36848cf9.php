@@ -92,64 +92,51 @@
                 <div class="col-lg-12">
 
                     <ol class="breadcrumb">
-
+                        <li>
+                            <i class="fa fa-dashboard"></i> <a href="/admin.php?c=position">推荐位管理</a>
+                        </li>
                         <li class="active">
-                            <i class="fa fa-table"></i><?php echo ($nav); ?>
+                            <i class="fa fa-edit"></i> 添加
                         </li>
                     </ol>
                 </div>
             </div>
             <!-- /.row -->
-            <div>
-                <button url="/Sample_CMS/admin.php?c=position&a=add" id="button-add" type="button"
-                        class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加
-                </button>
-            </div>
 
             <div class="row">
                 <div class="col-lg-6">
-                    <h3></h3>
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover singcms-table">
-                            <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>推荐位名称</th>
-                                <th>时间</th>
-                                <th>状态</th>
-                                <th>操作</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <?php if(is_array($positions)): $i = 0; $__LIST__ = $positions;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$position): $mod = ($i % 2 );++$i;?><tr>
-                                    <td><?php echo ($position["id"]); ?></td>
-                                    <td><?php echo ($position["name"]); ?></td>
-                                    <td><?php echo (date("Y-m-d H:i",$position["create_time"])); ?></td>
-                                    <td><span attr-status="<?php if( $position['status'] == 1): ?>0
-                                        <?php else: ?>
-                                        1<?php endif; ?>" attr-id="<?php echo ($position["id"]); ?>" class="sing_cursor singcms-on-off"
-                                        id="singcms-on-off" ><?php echo (status($position["status"])); ?></span></td>
-                                    <td>
-                                        <span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true"
-                                              id="singcms-edit" attr-id="<?php echo ($position["id"]); ?>"></span>
-                                        <a href="javascript:void(0)" id="singcms-delete" attr-id="<?php echo ($position["id"]); ?>"
-                                           attr-message="删除">
-                                            <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-                                        </a>
 
-                                    </td>
-                                </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    <form class="form-horizontal" id="singcms-form">
+                        <div class="form-group">
+                            <label for="inputname" class="col-sm-2 control-label">推荐位名称:</label>
+                            <div class="col-sm-5">
+                                <input type="text" name="name" value="<?php echo ($vo["name"]); ?>" class="form-control" id="inputname"
+                                       placeholder="请填写推荐位名称">
+                            </div>
+                        </div>
 
-                            </tbody>
-                        </table>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">推荐位描述:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" value="<?php echo ($vo["description"]); ?>" name="description"
+                                       id="inputPassword3" placeholder="请填写描述">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="id" value="<?php echo ($vo["id"]); ?>">
 
-                    </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+                                </div>
+                            </div>
+                    </form>
+
+
                 </div>
 
             </div>
             <!-- /.row -->
-
 
         </div>
         <!-- /.container-fluid -->
@@ -158,18 +145,16 @@
     <!-- /#page-wrapper -->
 
 </div>
-<!-- /#wrapper -->
 <script>
     var SCOPE = {
-        'edit_url': '/Sample_CMS/admin.php?c=position&a=edit',
-        'set_status_url': '/Sample_CMS/admin.php?c=position&a=setStatus',
-        'add_url': '/Sample_CMS/admin.php?c=position&a=add',
-    }
-    $(".singcms-table #sing-add-position-content").on('click', function () {
-        var id = $(this).attr('attr-id');
-        window.location.href = '/Sample_CMS/admin.php?c=positioncontent&a=index&position_id=' + id;
-    });
+        'save_url': '/Sample_CMS/admin.php?c=position&a=add',
+        'jump_url': '/Sample_CMS/admin.php?c=position'
+    };
+
+
 </script>
+<!-- /#wrapper -->
+<script type="text/javascript" src="/Sample_CMS/Public/js/admin/form.js"></script>
 <script src="/Sample_CMS/Public/js/admin/common.js"></script>
 
 

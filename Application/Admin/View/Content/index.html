@@ -37,7 +37,7 @@
                                 <option value=''>全部分类</option>
                                 <foreach name="webSiteMenu" item="sitenav">
                                     <option value="{$sitenav.menu_id}"
-                                    <if condition="$catId eq $sitenav.menu_id">selected="selected"</if>
+                                    <if condition="$catId eq $sitenav[menu_id]">selected="selected"</if>
                                     >{$sitenav.name}</option>
                                 </foreach>
                             </select>
@@ -91,8 +91,8 @@
                                         <td>{$new.create_time|date="Y-m-d H:i",###}</td>
                                         <td><span attr-status="<if condition=" $new['status'] eq 1">0
                                             <else/>
-                                            1</if>" attr-id="{$new.news_id}" class="sing_cursor singcms-on-off"
-                                            id="singcms-on-off" >{$new.status|status}</span></td>
+                                            1</if>"attr-id="{$new.news_id}" class="sing_cursor
+                                            singcms-on-off"id="singcms-on-off" >{$new.status|status}</span></td>
                                         <td><span class="sing_cursor glyphicon glyphicon-edit" aria-hidden="true"
                                                   id="singcms-edit" attr-id="{$new.news_id}"></span>
                                             <a href="javascript:void(0)" id="singcms-delete" attr-id="{$new.news_id}"

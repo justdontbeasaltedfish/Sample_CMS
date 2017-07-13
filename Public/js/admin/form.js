@@ -2,6 +2,7 @@
  * 表单功能类
  */
 
-var form  = {
-    submit : function()
+var form = {
+    submit: function () {
+    }
 }

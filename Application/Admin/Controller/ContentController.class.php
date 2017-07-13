@@ -143,7 +143,7 @@ class ContentController extends CommonController
         try {
             if ($_POST) {
                 $id = $_POST['id'];
-                $status = $_POST['status'];
+                $status = trim($_POST['status']);
                 if (!$id) {
                     return show(0, 'ID不存在');
                 }
