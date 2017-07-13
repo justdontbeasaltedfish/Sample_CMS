@@ -59,7 +59,7 @@
                     class="fa fa-user"></i> <?php echo getLoginUsername()?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+                    <a href="/Sample_CMS/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
                 </li>
 
                 <li class="divider"></li>
@@ -93,7 +93,7 @@
 
                     <ol class="breadcrumb">
                         <li>
-                            <i class="fa fa-dashboard"></i> <a href="/admin.php?c=content">文章管理</a>
+                            <i class="fa fa-dashboard"></i> <a href="/Sample_CMS/admin.php?c=content">文章管理</a>
                         </li>
                         <li class="active">
                             <i class="fa fa-table"></i>文章列表

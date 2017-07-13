@@ -15,7 +15,7 @@
         <div class="container">
             <div class="navbar-header">
                 <a href="/Sample_CMS/">
-                    <img src="/Public/images/logo.png" alt="">
+                    <img src="/Sample_CMS/Public/images/logo.png" alt="">
                 </a>
             </div>
             <ul class="nav navbar-nav navbar-left">

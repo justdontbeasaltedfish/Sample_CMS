@@ -39,6 +39,7 @@
 
 
 <body>
+
 <div id="wrapper">
 
     <?php
@@ -48,7 +49,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
 
-        <a class="navbar-brand">Sample_CMS内容管理平台</a>
+        <a class="navbar-brand">singcms内容管理平台</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -89,24 +90,55 @@
 
             <!-- Page Heading -->
             <div class="row">
-    <div class="col-lg-12">
-        <a href="/Sample_CMS/admin.php?c=basic">
-            <button type="button" class="btn <?php if($type == 1): ?>btn-primary<?php endif; ?>"> 基本配置</button>
-        </a>
-        <a href="/Sample_CMS/admin.php?c=basic&a=cache">
-            <button type="button" class="btn <?php if($type == 2): ?>btn-primary<?php endif; ?>"> 缓存配置</button>
-        </a>
-    </div>
-</div>
+                <div class="col-lg-12">
+
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="fa fa-dashboard"></i> <a href="javascript:void(0)">个人中心</a>
+                        </li>
+                        <li class="active">
+                            <i class="fa fa-edit"></i> 配置
+                        </li>
+                    </ol>
+                </div>
+            </div>
             <!-- /.row -->
+
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="form-group">
-                        <label for="inputname" class="col-sm-2 control-label">更新首页缓存:</label>
-                        <div class="col-sm-5">
-                            <button type="button" class="btn" id="cache-index">确定更新</button>
+
+                    <form class="form-horizontal" id="singcms-form">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">用户名:</label>
+                            <div class="col-sm-5">
+                                <?php echo ($vo["username"]); ?>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">真实姓名:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" name="realname" id="inputPassword3"
+                                       placeholder="" value="<?php echo ($vo["realname"]); ?>">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">个人邮箱:</label>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" name="email" id="inputPassword3" placeholder=""
+                                       value="<?php echo ($vo["email"]); ?>">
+                            </div>
+                        </div>
+                        <input type="hidden" name="admin_id" value="<?php echo ($vo["admin_id"]); ?>"/>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="button" class="btn btn-default" id="singcms-button-submit">提交</button>
+                            </div>
+                        </div>
+                    </form>
 
 
                 </div>
@@ -121,27 +153,16 @@
     <!-- /#page-wrapper -->
 
 </div>
-<!-- /#wrapper -->
-<script type="text/javascript" src="/Sample_CMS/Public/js/admin/form.js"></script>
 <script>
-    $("#cache-index").click(function () {
+    var SCOPE = {
+        'save_url': '/Sample_CMS/admin.php?c=admin&a=save',
+        'jump_url': '',
 
-        var url = '/Sample_CMS/index.php?c=index&a=build_html';
-        var jump_url = '/Sample_CMS/admin.php?c=basic&a=cache';
-        var postData = {};
-
-        $.post(url, postData, function (result) {
-            if (result.status == 1) {
-                // 成功
-                return dialog.success(result.message, jump_url);
-            } else if (result.status == 0) {
-                return dialog.error(result.message);
-            }
-
-        }, "JSON");
-    });
+    };
 
 </script>
+<!-- /#wrapper -->
+<script type="text/javascript" src="/Sample_CMS/Public/js/admin/form.js"></script>
 <script src="/Sample_CMS/Public/js/admin/common.js"></script>
 
 

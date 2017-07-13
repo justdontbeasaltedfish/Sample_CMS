@@ -48,7 +48,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
 
-        <a class="navbar-brand">singcms内容管理平台</a>
+        <a class="navbar-brand">Sample_CMS内容管理平台</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -59,7 +59,7 @@
                     class="fa fa-user"></i> <?php echo getLoginUsername()?> <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+                    <a href="/Sample_CMS/admin.php?c=admin&a=personal"><i class="fa fa-fw fa-user"></i> 个人中心</a>
                 </li>
 
                 <li class="divider"></li>
