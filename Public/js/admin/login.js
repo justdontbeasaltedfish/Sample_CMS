@@ -1,32 +1,22 @@
 /**
- * 前端登录业务类
- * @author singwa
+ * @author justdontbeasaltedfish
  */
-var login = {
-    check: function () {
-        // 获取登录页面中的用户名 和 密码
-        var username = $('input[name="username"]').val();
-        var password = $('input[name="password"]').val();
+$("#login").on("click", function () {
+    var userName = $("input[name='userName']").val();
+    var password = $("input[name='password']").val();
 
-        if (!username) {
-            dialog.error('用户名不能为空');
+    var url = "/Sample_CMS/admin.php?c=login&a=check";
+    var data = {
+        "userName": userName,
+        "password": password
+    };
+
+    $.post(url, data, function (result) {
+        if (result.status == 0) {
+            return dialog.error(result.message);
         }
-        if (!password) {
-            dialog.error('密码不能为空');
+        if (result.status == 1) {
+            return dialog.success(result.message, "/Sample_CMS/admin.php?c=index&a=index");
         }
-
-        var url = "/Sample_CMS/admin.php?c=login&a=check";
-        var data = {'username': username, 'password': password};
-        // 执行异步请求  $.post
-        $.post(url, data, function (result) {
-            if (result.status == 0) {
-                return dialog.error(result.message);
-            }
-            if (result.status == 1) {
-                return dialog.success(result.message, '/Sample_CMS/admin.php?c=index');
-            }
-
-        }, 'JSON');
-
-    }
-}
+    }, "JSON")
+});

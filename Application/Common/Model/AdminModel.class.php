@@ -17,10 +17,9 @@ class AdminModel extends Model
         $this->_db = M('admin');
     }
 
-    public function getAdminByUsername($username = '')
+    public function getAdminByUsername($userName = '')
     {
-        $res = $this->_db->where('username="' . $username . '"')->find();
-        return $res;
+        return $this->_db->where('username="' . $userName . '"')->find();
     }
 
     public function getAdminByAdminId($adminId = 0)

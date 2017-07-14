@@ -10,12 +10,45 @@
 
                     {$vo.content}
                 </div>
+                <div class="page-header">
+                    <h4 style="color: rgb(210, 34, 34);">发表评论
+                        <small>愿您的每句评论，都能给大家的生活添色彩，带来共鸣，带来思索，带来快乐。</small>
+                    </h4>
+                </div>
+                <div class="well well-sm">
+                    <form role="form"
+                          action="../../action.php?id=<?php echo $_GET['id']; ?>&subjectID=<?php echo $_GET['articleID']; ?>"
+                          method="post">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Sample_CMS 有您参与更精彩！" name="comment" required></textarea>
+                        </div>
+                        <fieldset <?php echo (isset($_GET['id'])) ? '' : 'disabled'; ?>>
+                        <button type="submit" class="btn btn-danger" name="submit" value="addComment">评论</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="page-header">
+                    <h4 style="color: rgb(210, 34, 34);">全部评论</h4>
+                </div>
+                <ul class="list-group">
+                        <li class="list-group-item">
+                            <h5 class="list-group-item-heading" style="color: #0000bf">ceshi
+                                <small>test</small>
+                            </h5>
+                            <p class="list-group-item-text">dsfdfsdfgds5465</p>
+                        </li>
+                </ul>
 
             </div>
 
             <include file="Index/right"/>
             <!-- end right-->
         </div>
+        <hr class="featurette-divider">
+        <footer>
+            <p class="pull-right"><a href="#">回到顶部</a></p>
+            <p style="color: grey">版权所有&copy;#312 中山大学新华学院（中大v-lab） 2016</p>
+        </footer>
     </div>
 </section>
 </body>
