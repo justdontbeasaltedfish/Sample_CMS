@@ -20,7 +20,6 @@ class CommonController extends Controller
 
     /**
      * 初始化
-     * @return
      */
     private function _init()
     {
@@ -28,7 +27,7 @@ class CommonController extends Controller
         $isLogin = $this->isLogin();
         if (!$isLogin) {
             // 跳转到登录页面
-            $this->redirect('/CMS/admin.php?c=login');
+            $this->redirect('/CMS/admin.php?c=login&a=index');
         }
     }
 

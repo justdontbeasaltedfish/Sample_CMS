@@ -28,28 +28,25 @@ function getMenuType($type)
 function status($status)
 {
     if ($status == 0) {
-        $str = '关闭';
+        $statusString = '关闭';
     } elseif ($status == 1) {
-        $str = '正常';
+        $statusString = '正常';
     } elseif ($status == -1) {
-        $str = '删除';
+        $statusString = '删除';
     }
-    return $str;
+    return $statusString;
 }
 
 function getAdminMenuUrl($nav)
 {
-    $url = '/Sample_CMS/admin.php?c=' . $nav['c'] . '&a=' . $nav['a'];
-    if ($nav['f'] == 'index') {
-        $url = '/Sample_CMS/admin.php?c=' . $nav['c'];
-    }
+    $url = '/Sample_CMS/admin.php?c=' . $nav['c'] . '&a=' . $nav['f'];
     return $url;
 }
 
-function getActive($navc)
+function getActive($navControllerName)
 {
-    $c = strtolower(CONTROLLER_NAME);
-    if (strtolower($navc) == $c) {
+    $controllerName = strtolower(CONTROLLER_NAME);
+    if (strtolower($navControllerName) == $controllerName) {
         return 'class="active"';
     }
     return '';

@@ -1,7 +1,8 @@
 /**
+ * @author justdontbeasaltedfish
  * 添加按钮操作
  */
-$("#button-add").click(function () {
+$("#button-add").on("click", function () {
     var url = SCOPE.add_url;
     window.location.href = url;
 });
@@ -9,32 +10,33 @@ $("#button-add").click(function () {
 /**
  * 提交form表单操作
  */
-$("#singcms-button-submit").click(function () {
-    var data = $("#singcms-form").serializeArray();
-    postData = {};
-    $(data).each(function (i) {
-        postData[this.name] = this.value;
+$("#singcms-button-submit").on("click", function () {
+    var formData = $("#singcms-form").serializeArray();
+
+    var data = {};
+    $(formData).each(function (i) {
+        data[this.name] = this.value;
     });
-    console.log(postData);
-    // 将获取到的数据post给服务器
-    url = SCOPE.save_url;
-    jump_url = SCOPE.jump_url;
-    $.post(url, postData, function (result) {
+    var url = SCOPE.save_url;
+    var jump_url = SCOPE.jump_url;
+
+    $.post(url, data, function (result) {
+        if (result.status == 0) {
+            dialog.error(result.message);
+        }
         if (result.status == 1) {
-            //成功
-            return dialog.success(result.message, jump_url);
-        } else if (result.status == 0) {
-            // 失败
-            return dialog.error(result.message);
+            dialog.success(result.message, jump_url);
         }
     }, "JSON");
 });
+
 /*
  编辑模型
  */
-$('.singcms-table #singcms-edit').on('click', function () {
-    var id = $(this).attr('attr-id');
-    var url = SCOPE.edit_url + '&id=' + id;
+$(".singcms-table #singcms-edit").on("click", function () {
+    var id = $(this).attr("attr-id");
+    var url = SCOPE.edit_url + "&id=" + id;
+
     window.location.href = url;
 });
 
@@ -42,42 +44,37 @@ $('.singcms-table #singcms-edit').on('click', function () {
 /**
  * 删除操作JS
  */
-$('.singcms-table #singcms-delete').on('click', function () {
-    var id = $(this).attr('attr-id');
-    var a = $(this).attr("attr-a");
+$(".singcms-table #singcms-delete").on("click", function () {
+    var id = $(this).attr("attr-id");
     var message = $(this).attr("attr-message");
     var url = SCOPE.set_status_url;
 
-    data = {};
-    data['id'] = id;
-    data['status'] = -1;
+    var data = {
+        "id": id,
+        "status": -1
+    };
 
     layer.open({
         type: 0,
         title: '是否提交？',
-        btn: ['yes', 'no'],
+        btn: ['Yes', 'No'],
         icon: 3,
         closeBtn: 2,
-        content: "是否确定" + message,
+        content: "是否确定" + message + '？',
         scrollbar: true,
         yes: function () {
-            // 执行相关跳转
             todelete(url, data);
-        },
+        }
 
     });
 
 });
 function todelete(url, data) {
-    $.post(
-        url,
-        data,
-        function (s) {
-            if (s.status == 1) {
-                return dialog.success(s.message, '');
-                // 跳转到相关页面
+    $.post(url, data, function (result) {
+            if (result.status == 1) {
+                return dialog.success(result.message, '');
             } else {
-                return dialog.error(s.message);
+                return dialog.error(result.message);
             }
         }
         , "JSON");
@@ -86,24 +83,23 @@ function todelete(url, data) {
 /**
  * 排序操作
  */
-$('#button-listorder').click(function () {
-    // 获取 listorder内容
-    var data = $("#singcms-listorder").serializeArray();
-    postData = {};
-    $(data).each(function (i) {
-        postData[this.name] = this.value;
+$('#button-listorder').on('click', function () {
+    var formData = $('#singcms-listorder').serializeArray();
+
+    var data = {};
+    $(formData).each(function (i) {
+        data[this.name] = this.value;
     });
-    console.log(data);
     var url = SCOPE.listorder_url;
-    $.post(url, postData, function (result) {
+
+    $.post(url, data, function (result) {
         if (result.status == 1) {
-            //成功
-            return dialog.success(result.message, result['data']['jump_url']);
+            dialog.success(result.message, result.data.jump_url);
         } else if (result.status == 0) {
-            // 失败
-            return dialog.error(result.message, result['data']['jump_url']);
+            dialog.error(result.message);
         }
-    }, "JSON");
+    }, 'JSON');
+
 });
 
 /**

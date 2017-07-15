@@ -25,7 +25,7 @@
             </div>
             <!-- /.row -->
             <div class="row">
-                <form action="/CMS/admin.php" method="get">
+                <form action="/Sample_CMS/admin.php" method="get">
 
                     <div class="input-group">
                         <span class="input-group-addon">类型</span>
@@ -75,7 +75,7 @@
                                 <tbody>
                                 <volist name="menus" id="menu">
                                     <tr>
-                                        <td><input size="4" type="text" name="listorder[{$menu.menu_id}]"
+                                        <td><input size="4" type="text" name="listOrder[{$menu.menu_id}]"
                                                    value="{$menu.listorder}"/></td>
                                         <td>{$menu.menu_id}</td>
                                         <td>{$menu.name}</td>
@@ -97,7 +97,7 @@
                         </form>
                         <nav>
                             <ul class="pagination">
-                                {$pageRes}
+                                {$pageResult}
                             </ul>
                         </nav>
                         <div>
@@ -122,14 +122,12 @@
 <!-- /#wrapper -->
 <!-- Morris Charts JavaScript -->
 <script>
-
     var SCOPE = {
         'add_url': '/Sample_CMS/admin.php?c=menu&a=add',
         'edit_url': '/Sample_CMS/admin.php?c=menu&a=edit',
         'set_status_url': '/Sample_CMS/admin.php?c=menu&a=setStatus',
-        'listorder_url': '/Sample_CMS/admin.php?c=menu&a=listorder',
-
-    }
+        'listorder_url': '/Sample_CMS/admin.php?c=menu&a=listorder'
+    };
 </script>
 <include file="Index/footer"/>
 
