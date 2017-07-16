@@ -1,8 +1,40 @@
 <?php
 
+//use
+
 /**
  * 公用的方法
  */
+
+function sendEmail($user_id, $user_email, $user_activation_hash)
+{
+    $mail = new PHPMailer;
+    $mail->CharSet = 'UTF-8';
+    $mail->IsSMTP();
+    $mail->SMTPDebug = 0;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'ssl';
+
+    $mail->Host = 'smtp.qq.com';
+    $mail->Username = '2094947437@qq.com';
+    $mail->Password = 'sawwgaffivkvegdh';
+    $mail->Port = 465;
+
+    $mail->From = '2094947437@qq.com';
+    $mail->FromName = 'Sample_CMS';
+    $mail->AddAddress($user_email);
+    $mail->Subject = '激活 Sample_CMS 账号';
+    $mail->Body = "请点击此链接来激活你的账号：http://39.108.130.201/Sample_CMS/index.php?m=home&c=register&a=activateAccount&user_id=$user_id&user_activation_verification_code=$user_activation_hash";
+
+    $wasSendingSuccessful = $mail->Send();
+
+    if ($wasSendingSuccessful) {
+        return true;
+    } else {
+//        $this->error = $mail->ErrorInfo;
+        return false;
+    }
+}
 
 function show($status, $message, $data = array())
 {

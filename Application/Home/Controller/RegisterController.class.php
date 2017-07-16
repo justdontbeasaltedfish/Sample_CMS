@@ -50,16 +50,31 @@ class RegisterController extends Controller
         }
 
         $user_password_hash = password_hash($user_password_new, PASSWORD_DEFAULT);
+        $user_activation_hash = sha1(uniqid(mt_rand(), true));
         $data = array(
             'user_name' => $user_name,
             'user_password_hash' => $user_password_hash,
-            'user_email' => $user_email
+            'user_email' => $user_email,
+            'user_activation_hash' => $user_activation_hash
         );
         $result = D('User')->writeNewUserToDatabase($data);
-        if ($result) {
-            return show(1, '注册成功！');
+
+        $wasSendingSuccessful = sendEmail($result, $user_email, $user_activation_hash);
+
+        if ($wasSendingSuccessful) {
+            return show(1, '邮件已发送，请点击邮件中的链接来激活你的账号！');
         } else {
+            D('User')->deleteUserById($result);
             return show(0, '注册失败！');
+        }
+    }
+
+    public function activateAccount()
+    {
+        if (isset($_GET['user_id']) && isset($_GET['user_activation_verification_code'])) {
+            $result = D('User')->verifyNewUser($_GET['user_id'], $_GET['user_activation_verification_code']);
+            print_r($result);
+            header('Location:/Sample_CMS/index.html');
         }
     }
 }

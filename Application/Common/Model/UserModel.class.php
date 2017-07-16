@@ -41,4 +41,23 @@ class UserModel extends Model
         $user_name = $result[0]['user_name'];
         return $user_name;
     }
+
+    public function deleteUserById($user_id)
+    {
+        $this->_db
+            ->where('user_id=' . $user_id)
+            ->delete();
+    }
+
+    public function verifyNewUser($user_id, $user_activation_hash)
+    {
+        $data = array(
+            'user_active' => 1,
+            'user_activation_hash' => null
+        );
+
+        return $this->_db
+            ->where('user_id=' . $user_id . ' AND user_activation_hash="' . $user_activation_hash . '"')
+            ->save($data);
+    }
 }
