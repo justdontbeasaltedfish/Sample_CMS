@@ -16,29 +16,38 @@
                     </h4>
                 </div>
                 <div class="well well-sm">
-                    <form role="form"
-                          action="../../action.php?id=<?php echo $_GET['id']; ?>&subjectID=<?php echo $_GET['articleID']; ?>"
-                          method="post">
+                    <form role="form" id="formComment">
                         <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Sample_CMS 有您参与更精彩！" name="comment" required></textarea>
+                            <textarea class="form-control" rows="3" placeholder="Sample_CMS 有您参与更精彩！"
+                                      name="comment_text" id="textArea_comment" required></textarea>
+                            <input type="hidden" name="news_id" value="{$vo.news_id}" id="hidden_news_id">
+                            <input type="hidden" name="user_id" id="hidden_user_id">
                         </div>
-                        <fieldset <?php echo (isset($_GET['id'])) ? '' : 'disabled'; ?>>
-                        <button type="submit" class="btn btn-danger" name="submit" value="addComment">评论</button>
+                        <fieldset>
+                            <button id="buttonComment" type="button" class="btn btn-danger" value="addComment">评论
+                            </button>
                         </fieldset>
                     </form>
                 </div>
                 <div class="page-header">
                     <h4 style="color: rgb(210, 34, 34);">全部评论</h4>
                 </div>
-                <ul class="list-group">
-                        <li class="list-group-item">
-                            <h5 class="list-group-item-heading" style="color: #0000bf">ceshi
-                                <small>test</small>
-                            </h5>
-                            <p class="list-group-item-text">dsfdfsdfgds5465</p>
-                        </li>
+                <ul class="list-group" id="ulComment">
+                    <!--<li class="list-group-item">-->
+                    <!--<h5 class="list-group-item-heading" style="color: #0000bf">ceshi-->
+                    <!--<small>test</small>-->
+                    <!--</h5>-->
+                    <!--<p class="list-group-item-text">dsfdfsdfgds5465</p>-->
+                    <!--<span style="position: relative; top: -45px; left: 790px" class="label label-info">New</span>-->
+                    <!--<div style="position: relative; top: 10px; left: 700px">-->
+                    <!--<span style="color: orangered" class="glyphicon glyphicon-thumbs-up" aria-hidden="true">-->
+                    <!--<span style="color: orangered" class="badge">42</span></span>-->
+                    <!--<span class="glyphicon glyphicon glyphicon-thumbs-down"-->
+                    <!--aria-hidden="true">-->
+                    <!--<span class="badge">42</span></span>-->
+                    <!--</div>-->
+                    <!--</li>-->
                 </ul>
-
             </div>
 
             <include file="Index/right"/>
@@ -53,7 +62,14 @@
 </section>
 </body>
 <script src="/Sample_CMS/Public/js/jquery.js"></script>
+<script src="/Sample_CMS/Public/js/bootstrap.min.js"></script>
+<script src="/Sample_CMS/Public/js/dialog/layer.js"></script>
+<script src="/Sample_CMS/Public/js/dialog.js"></script>
+<script src="/Sample_CMS/Public/js/isLogin.js"></script>
+<script src="/Sample_CMS/Public/js/home/common.js"></script>
 <script>
-
+    $(document).ready(function () {
+        refresh();
+    });
 </script>
 </html>

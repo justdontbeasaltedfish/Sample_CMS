@@ -1,6 +1,7 @@
 <?php
    $config = D("Basic")->select();
 $navs = D("Menu")->getBarMenus();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -11,8 +12,129 @@ $navs = D("Menu")->getBarMenus();
     <meta name="description" content="{$config.description}"/>
     <link rel="stylesheet" href="/Sample_CMS/Public/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="/Sample_CMS/Public/css/home/main.css" type="text/css"/>
+    <style>
+        body {
+            /*background-color: #C7EDCC;*/
+            font-family: "microsoft yahei";
+            /*min-width: 800px;*/
+        }
+
+        img {
+            /*width: 100%;*/
+            /*height: 462px;*/
+        }
+
+        .navbar {
+            /*margin-bottom: -10px;*/
+        }
+
+        #myppt {
+            margin-top: -20px;
+
+        }
+    </style>
 </head>
 <body>
+<div id="divLogin">
+    <ul class="nav navbar-nav navbar-right">
+        <li><a data-toggle="modal" data-target="#register"><span class="glyphicon glyphicon-user"></span> 注册</a>
+        </li>
+        <li><a data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> 登录</a>
+        </li>
+    </ul>
+</div>
+<div id="divLogout">
+    <ul class="nav navbar-right top-nav">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+                <div id="userName"></div>
+                <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="/Sample_CMS/index.html"><i class="fa fa-fw fa-user"></i> 个人中心</a>
+                </li>
+
+                <li class="divider"></li>
+                <li>
+                    <a href="/Sample_CMS/index.php?m=home&c=login&a=logout"><i class="fa fa-fw fa-power-off"></i>
+                        退出</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- 注册窗口 -->
+<div id="register" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h1 class="text-center">注册</h1>
+            </div>
+            <div class="modal-body">
+                <form id="formRegister" class="form-group">
+                    <div class="form-group">
+                        <label for="">用户名</label>
+                        <input class="form-control" type="text" placeholder="6-15位字母或数字" name="user_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">密码</label>
+                        <input class="form-control" type="password" placeholder="至少6位字母或数字" name="user_password_new">
+                    </div>
+                    <div class="form-group">
+                        <label for="">再次输入密码</label>
+                        <input class="form-control" type="password" placeholder="至少6位字母或数字" name="user_password_repeat">
+                    </div>
+                    <div class="form-group">
+                        <label for="">邮箱</label>
+                        <input class="form-control" type="email" placeholder="例如:123@123.com" name="user_email">
+                    </div>
+                    <div class="text-right">
+                        <button id="buttonRegister" class="btn btn-primary" type="button">提交</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                    <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 登录窗口 -->
+<div id="login" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h1 class="text-center">登录</h1>
+            </div>
+            <div class="modal-body">
+                <form id="formLogin" class="form-group">
+                    <div class="form-group">
+                        <label for="">用户名</label>
+                        <input class="form-control" type="text" placeholder="" name="user_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">密码</label>
+                        <input class="form-control" type="password" placeholder="" name="user_password">
+                    </div>
+                    <div class="text-right">
+                        <button id="buttonLogin" class="btn btn-primary" type="button">登录</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                    <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <header id="header">
     <div class="navbar-inverse">
         <div class="container">
@@ -33,6 +155,7 @@ $navs = D("Menu")->getBarMenus();
                         >{$vo.name}</a></li>
                 </foreach>
             </ul>
+            <div></div>
         </div>
     </div>
 </header>

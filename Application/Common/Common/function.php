@@ -61,9 +61,14 @@ function showKind($status, $data)
     exit(json_encode(array('error' => 1, 'message' => '上传失败')));
 }
 
-function getLoginUsername()
+function getLoginAdminName()
 {
     return $_SESSION['adminUser']['username'] ? $_SESSION['adminUser']['username'] : '';
+}
+
+function getLoginUserName()
+{
+    return $_SESSION['userInfo']['user_name'] ? $_SESSION['userInfo']['user_name'] : '';
 }
 
 function getCatName($navs, $id)

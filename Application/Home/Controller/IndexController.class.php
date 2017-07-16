@@ -9,6 +9,7 @@ class IndexController extends CommonController
 {
     public function index($type = '')
     {
+
         //获取排行
         $rankNews = $this->getRank();
         // 获取首页大图数据
