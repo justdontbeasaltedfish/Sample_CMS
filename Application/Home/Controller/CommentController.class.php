@@ -50,4 +50,15 @@ class CommentController extends Controller
             return show(1, '刷新成功！', $data);
         }
     }
+
+    public function updateCommentLikeCount()
+    {
+        $result = D('Comment')->updateCommentLikeCountById($_POST['comment_id'], $_POST['comment_like_count']);
+
+        if ($result == 1) {
+            return show(1, '👍');
+        } elseif ($result == 0) {
+            return show(0, '👎');
+        }
+    }
 }

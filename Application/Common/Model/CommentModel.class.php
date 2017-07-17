@@ -25,4 +25,11 @@ class CommentModel extends Model
             ->order('create_time desc')
             ->select();
     }
+
+    public function updateCommentLikeCountById($comment_id, $comment_like_count)
+    {
+        return $this->_db
+            ->where('comment_id=' . $comment_id)
+            ->save(array('comment_like_count' => $comment_like_count + 1));
+    }
 }

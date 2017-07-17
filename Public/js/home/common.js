@@ -86,12 +86,28 @@ function refresh(isInsert) {
             var count = result.data.length;
             if (isInsert) {
                 var time = getLocalTime(result.data[0]['create_time']);
-                $comment.prepend('<li class="list-group-item"> <h5 class="list-group-item-heading" style="color: #0000bf">' + result.data[0]['user_name'] + '   <small>' + time + '</small> </h5> <p class="list-group-item-text">' + result.data[0]['comment_text'] + '</p> <span style="position: relative; top: -45px; left: 790px" class="label label-info">' + count + '楼</span> <div style="position: relative; top: 10px; left: 700px"> <span style="color: pink" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> <span style="color: pink" class="badge">42</span></span> <span class="glyphicon glyphicon glyphicon-thumbs-down"aria-hidden="true"> <span class="badge">42</span></span> </div> </li>');
+                $comment.prepend('<li class="list-group-item">' +
+                    '<h5 class="list-group-item-heading" style="color: #0000bf">' + result.data[0]['user_name'] + '   <small>' + time + '</small> </h5>' +
+                    '<p class="list-group-item-text">' + result.data[0]['comment_text'] + '</p>' +
+                    '<span style="position: relative; top: -45px; left: 790px" class="label label-info">' + count + '楼</span>' +
+                    '<div style="position: relative; top: 10px; left: 700px" id="div_comment_like_count" attr_comment_id="' + result.data[0]['comment_id'] + '"> ' +
+                    '<span style="color: pink" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> ' +
+                    '<span style="color: pink" class="badge" id="span_comment_like_count">' + result.data[0]['comment_like_count'] + '</span></span> ' +
+                    '</div> ' +
+                    '</li>');
             } else {
                 $(result.data).each(function (i) {
                     var $floor = count - i;
                     var time = getLocalTime(this.create_time);
-                    $comment.append('<li class="list-group-item"> <h5 class="list-group-item-heading" style="color: #0000bf">' + this.user_name + '   <small>' + time + '</small> </h5> <p class="list-group-item-text">' + this.comment_text + '</p> <span style="position: relative; top: -45px; left: 790px" class="label label-info">' + $floor + '楼</span> <div style="position: relative; top: 10px; left: 700px"> <span style="color: pink" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> <span style="color: pink" class="badge">42</span></span> <span class="glyphicon glyphicon glyphicon-thumbs-down"aria-hidden="true"> <span class="badge">42</span></span> </div> </li>');
+                    $comment.append('<li class="list-group-item"> ' +
+                        '<h5 class="list-group-item-heading" style="color: #0000bf">' + this.user_name + '   <small>' + time + '</small> </h5> ' +
+                        '<p class="list-group-item-text">' + this.comment_text + '</p> ' +
+                        '<span style="position: relative; top: -45px; left: 790px" class="label label-info">' + $floor + '楼</span> ' +
+                        '<div style="position: relative; top: 10px; left: 700px" id="div_comment_like_count" attr_comment_id="' + this.comment_id + '"> ' +
+                        '<span style="color: pink" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"> ' +
+                        '<span style="color: pink" class="badge" id="span_comment_like_count">' + this.comment_like_count + '</span></span> ' +
+                        '</div> ' +
+                        '</li>');
                 })
             }
         } else if (result.status == 0) {
@@ -99,6 +115,28 @@ function refresh(isInsert) {
         }
     }, 'JSON');
 }
+
+$('#ulComment').on('click', '#div_comment_like_count', function () {
+    var comment_id = $(this).attr('attr_comment_id');
+    var comment_like_count = $(this).find('span').eq(1).text();
+
+    var data = {
+        'comment_id': comment_id,
+        'comment_like_count': comment_like_count
+    };
+
+    url = '/Sample_CMS/index.php?m=home&c=comment&a=updateCommentLikeCount';
+
+    var $comment_like_count = $(this).find('span').eq(1);
+    $.post(url, data, function (result) {
+        if (result.status == 1) {
+            console.log(comment_like_count);
+            $comment_like_count.text(parseInt(comment_like_count) + 1);
+        } else if (result.status == 0) {
+            console.log(result.message);
+        }
+    }, 'JSON');
+});
 
 function getLocalTime(nS) {
     return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
